@@ -10,6 +10,7 @@ import androidx.test.uiautomator.By
 import androidx.test.uiautomator.UiDevice
 import androidx.test.uiautomator.UiObject2
 import androidx.test.uiautomator.Until
+import mbaas.com.nifcloud.kotlinpayloadapp.Utils.allowPermissionsIfNeeded
 import mbaas.com.nifcloud.kotlinpayloadapp.Utils.sendPushWithSearchCondition
 import org.hamcrest.CoreMatchers.*
 import org.junit.Assert
@@ -42,6 +43,7 @@ class ApplicationTest {
 
     @Test
     fun validateDisplayScreen() {
+        allowPermissionsIfNeeded()
         onView(allOf(withText("KotlinPayloadApp"), isDisplayed()))
         onView(allOf(withText("com.nifcloud.mbaas.pushId"), isDisplayed()))
         onView(allOf(withText("com.nifcloud.mbaas.richUrl"), isDisplayed()))
@@ -54,6 +56,7 @@ class ApplicationTest {
     @Test
     @Throws(InterruptedException::class)
     fun clickOnSendNotification() {
+        allowPermissionsIfNeeded()
         sendPushWithSearchCondition()
         device.openNotification()
         device.wait(Until.hasObject(By.text(NOTIFICATION_TITLE)), TIMEOUT.toLong())

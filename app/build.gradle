@@ -2,12 +2,12 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 33
 
     defaultConfig {
         applicationId "mbaas.com.nifcloud.kotlinpayloadapp"
-        minSdkVersion 18
-        targetSdkVersion 28
+        minSdkVersion 26
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -39,14 +39,15 @@ dependencies {
 
     // Espresso dependencies
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation "androidx.test:core:1.5.0-alpha02"
     androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
 
     //noinspection GradleCompatible
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.code.gson:gson:2.3.1'
-    implementation files('libs/NCMB.jar')
-    implementation 'com.google.firebase:firebase-messaging:20.2.3'
-    implementation 'com.google.android.gms:play-services-base:17.3.0'
+    implementation 'com.nifcloud.mbaas:ncmb_android:4.1.0'
+    implementation 'com.google.firebase:firebase-messaging:22.0.0'
+    implementation 'com.google.android.gms:play-services-base:17.6.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
