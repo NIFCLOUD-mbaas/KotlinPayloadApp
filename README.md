@@ -18,12 +18,12 @@
 
 ## 動作環境
 
-* Android Studio ver. 3.1
-* Android 6.0
-* Android SDK v3
+* MacOS Monterey version 12.5
+* Android Studio Chipmunk | 2021.2.1 Patch 2
+* Pixel 2 - Android 13 (Simulator)
+* Android SDK v4.1.0
     * SDK v2系だと動作しないので注意
 
-※このサンプルアプリは、プッシュ通知を受信する必要があるため実機ビルドが必要です<br>
 ※上記内容で動作確認をしています
 
 ## プッシュ通知の仕組み
@@ -82,7 +82,7 @@ https://mbaas.nifcloud.com/doc/current/common/push_setup_fcm_json.html<br>
 
 ### 3. AndroidStudioでアプリを起動
 
-* AndroidStudioを開き、`Open an existing Android Project`を選択し、解凍したプロジェクトを選択します。
+* AndroidStudioを開き、`Open`を選択し、解凍したプロジェクトを選択します。
 
 ![画像7](/readme-img/android_studio.png)
 

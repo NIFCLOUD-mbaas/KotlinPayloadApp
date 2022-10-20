@@ -28,10 +28,10 @@ class CustomFcmListenerService : NCMBFirebaseMessagingService() {
 
             } else if (data.containsKey("com.nifcloud.mbaas.PushId")) {
                 val pushid = data.getString("com.nifcloud.mbaas.PushId")
-                Log.d(TAG, pushid)
+                Log.d(TAG, "" + pushid)
             } else if (data.containsKey("com.nifcloud.mbaas.RichUrl")) {
                 val url = data.getString("com.nifcloud.mbaas.RichUrl")
-                Log.d(TAG, url)
+                Log.d(TAG, "" + url)
             }
         }
         //デフォルトの通知
